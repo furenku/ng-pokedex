@@ -1,7 +1,13 @@
 <ul>
+
   <article *ngFor="let pokemon of pokemons">
-    <h1>
-      {{pokemon.name}}
-    </h1>
+  
+      <a [routerLink]="['/pokemon',pokemon.id]">
+        <h1>
+          {{pokemon.name}}
+        </h1>      
+      </a>
+
   </article>
+  
 </ul>

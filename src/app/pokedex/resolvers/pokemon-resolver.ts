@@ -11,14 +11,16 @@ import { Observable, of } from 'rxjs';
 
 
 @Injectable()
-export class PokemonsResolver implements Resolve<Observable<any[]>> {
-// export class PokemonsResolver implements Resolve<Observable<Pokemon[]>> {
+export class PokemonResolver implements Resolve<Observable<any>> {
+// export class PokemonResolver implements Resolve<Observable<Pokemon[]>> {
 
   constructor( private pokedexService: PokedexService) { }
 
-  resolve(route: ActivatedRouteSnapshot): Observable<any[]> {
+  resolve(route: ActivatedRouteSnapshot): Observable<any> {
 
-    return this.pokedexService.fetchPokemons();
+    let id = route.params['pokemon_id'];
+        
+    return this.pokedexService.fetchPokemon( id );
     
   }
   
