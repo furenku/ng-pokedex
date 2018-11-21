@@ -1,7 +1,5 @@
 <ul>
-  <article *ngFor="let pokemon of pokemons">
-    <h1>
-      {{pokemon.name}}
-    </h1>
-  </article>
+
+  <pokedex-card [pokemon]="pokemon" *ngFor="let pokemon of pokemons"></pokedex-card>      
+  
 </ul>

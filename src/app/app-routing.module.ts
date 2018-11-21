@@ -8,7 +8,10 @@ const routes: Routes = [
   {
     path: "",
     loadChildren: './pokedex/pokedex.module#PokedexModule'
-    // component: PokedexListComponent
+  },
+  {
+    path: "pokedex/:pokemon_id",
+    loadChildren: './pokedex/pokedex.module#PokedexModule'
   }
 ];
 

@@ -11,14 +11,14 @@ export class PokedexListComponent implements OnInit {
 
   public pokemons: any[];
 
-  constructor(private route: ActivatedRoute, private pokemonsService: PokedexService ) { }
+  constructor(private route: ActivatedRoute, private pokedexService: PokedexService ) { }
 
   ngOnInit() {
     
-    
     this.pokemons = this.route.snapshot.data['pokemons'] || {};
-
     
+    this.pokedexService.displayedPokemons.subscribe( pokemons => this.pokemons = pokemons ); 
+
   }
 
 }
