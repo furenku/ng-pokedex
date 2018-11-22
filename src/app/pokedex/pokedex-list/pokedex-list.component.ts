@@ -21,4 +21,12 @@ export class PokedexListComponent implements OnInit {
 
   }
 
+
+  showMore() {
+
+    this.pokedexService.showMore();
+  
+  }
+
+
 }

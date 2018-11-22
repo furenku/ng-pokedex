@@ -13,9 +13,15 @@ export class PokedexService {
 
   public displayedPokemons: BehaviorSubject<any[]>;
 
+  public pokemonCount: number;
+
+
   constructor(private http: HttpClient) {
 
     this.displayedPokemons = new BehaviorSubject([]);
+    
+    this.pokemonCount = 12;
+
 
   }
 
@@ -29,7 +35,7 @@ export class PokedexService {
 
       this.pokemons = pokemons; 
    
-      this.displayedPokemons.next( pokemons )
+      this.displayedPokemons.next( pokemons.slice(0, this.pokemonCount ) )
    
     });
     
@@ -50,8 +56,17 @@ export class PokedexService {
       pokemon => pokemon.name.toLowerCase().includes( searchString.toLowerCase() )
     );
     
-    this.displayedPokemons.next( filteredPokemons )
+    this.displayedPokemons.next( filteredPokemons.slice(0, this.pokemonCount ) )
     
+  }
+
+
+  showMore( ) {
+
+    this.pokemonCount += 12;
+
+    this.displayedPokemons.next( this.pokemons.slice(0, this.pokemonCount ) )
+
   }
 
 }

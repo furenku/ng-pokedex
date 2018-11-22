@@ -1,9 +1,17 @@
 <header class="header">
-  
-  <h4>
-    Busca tu Pokemon:
-  </h4>
 
-  <input type="text" [formControl]="searchInput">
+    <h1>
+      Pokedex
+    </h1>
 
+    <div>
+        <label>Busca a tu pokemon favorito:</label>
+
+        <input type="text" [formControl]="searchInput">
+    
+        <small className="form-text text-muted">
+          Actualmente solo se pueden hacer búsquedas por nombre
+        </small>
+    
+    </div>
 </header>
