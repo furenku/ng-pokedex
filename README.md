@@ -3,7 +3,7 @@
 Pokedex built with Angular
 For a [BEDU](http://bedu.org) workshop comparing Angular, Vue, React
 
-- [vue version](http://github.com/coderdiaz/vue-cli-pokedex)
+- [Vue version](http://github.com/coderdiaz/vue-cli-pokedex)
 - [React version](https://github.com/pitakill/react-pokedex)
 
 
