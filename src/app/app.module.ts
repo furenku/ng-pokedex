@@ -25,9 +25,7 @@ import { PokedexService } from './pokedex/pokedex.service';
     PokedexModule,
     AppRoutingModule
   ],
-  providers: [
-    PokedexService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
