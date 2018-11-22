@@ -16,7 +16,8 @@
               <div class="col-md-7">
                 <h4>Tipo</h4>
 
-                <pokedex-tag [type]="pokemon.type"></pokedex-tag>
+                
+                <pokedex-tag [type]="typeTag" *ngFor="let typeTag of pokemon.type"></pokedex-tag>
 
                 <h4 class="mt-3">Debilidades</h4>
                 

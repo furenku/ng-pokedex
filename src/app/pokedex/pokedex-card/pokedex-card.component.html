@@ -7,7 +7,7 @@
       <h4 class="pokedex-card-details__title">{{pokemon.name}}</h4>
       <div class="pokedex-card__types">
       
-        <pokedex-tag [type]="pokemon.type"></pokedex-tag>
+        <pokedex-tag [type]="typeTag" *ngFor="let typeTag of pokemon.type"></pokedex-tag>
         
       </div>
     </div>
