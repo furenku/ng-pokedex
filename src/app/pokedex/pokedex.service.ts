@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Pokemon } from "./pokemon.model";
 
 @Injectable({
-  // providedIn: 'root'
+  providedIn: 'root'
 })
 export class PokedexService {
 
