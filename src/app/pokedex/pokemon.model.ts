@@ -1,4 +1,5 @@
 export interface Pokemon {
+    
     "abilities": string[],
     "detailPageURL": string,
     "weight": number,
