@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, from, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
+import { Pokemon } from "./pokemon.model";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,9 +11,9 @@ export class PokedexService {
 
   private api_url = 'https://gist.githubusercontent.com/coderdiaz/633125b46490f2ffa3b21ebeaa0cf6e2/raw/763b3d6c856010555e92adb889b6b342dfe51063';
 
-  public pokemons: any[];
+  public pokemons: Pokemon[];
 
-  public displayedPokemons: BehaviorSubject<any[]>;
+  public displayedPokemons: BehaviorSubject<Pokemon[]>;
 
   public pokemonCount: number;
 
@@ -25,10 +27,10 @@ export class PokedexService {
 
   }
 
-  fetchPokemons() : Observable<any[]> {
+  fetchPokemons() : Observable<Pokemon[]> {
     
     let pokemons =  this.http
-    .get<any[]>(`${this.api_url}/`)
+    .get<Pokemon[]>(`${this.api_url}/`)
 
     
     pokemons.subscribe( pokemons => {
@@ -43,7 +45,7 @@ export class PokedexService {
 
   }
 
-  fetchPokemon( id: number ) : Observable<any> {
+  fetchPokemon( id: number ) : Observable<Pokemon> {
     
     return from( this.pokemons.filter( pokemon => pokemon.id == id ));
 

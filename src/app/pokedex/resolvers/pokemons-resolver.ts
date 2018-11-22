@@ -6,17 +6,19 @@ import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 
 import { PokedexService } from '../pokedex.service';
 
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+
+import { Pokemon } from "../pokemon.model";
 
 
 
 @Injectable()
-export class PokemonsResolver implements Resolve<Observable<any[]>> {
+export class PokemonsResolver implements Resolve<Observable<Pokemon[]>> {
 // export class PokemonsResolver implements Resolve<Observable<Pokemon[]>> {
 
   constructor( private pokedexService: PokedexService) { }
 
-  resolve(route: ActivatedRouteSnapshot): Observable<any[]> {
+  resolve(route: ActivatedRouteSnapshot): Observable<Pokemon[]> {
 
     return this.pokedexService.fetchPokemons();
     

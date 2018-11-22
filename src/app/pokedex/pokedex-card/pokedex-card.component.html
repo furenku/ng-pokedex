@@ -6,15 +6,9 @@
       <small class="pokedex-card-details__number">#{{pokemon.number}}</small>
       <h4 class="pokedex-card-details__title">{{pokemon.name}}</h4>
       <div class="pokedex-card__types">
-        <!-- 
-        { pokemon.type.map((type, index) => (
-              <PokedexTag
-              key={{index}}
-              type={{type}}
-            />
-            ))
-          }
-        -->
+      
+        <pokedex-tag [type]="pokemon.type"></pokedex-tag>
+        
       </div>
     </div>
   </a>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'pokedex-tag',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokedex-tag.component.scss']
 })
 export class PokedexTagComponent implements OnInit {
+
+  @Input() type: string;
 
   constructor() { }
 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { Pokemon } from "../pokemon.model";
+
 @Component({
   selector: 'pokedex-detail',
   templateUrl: './pokedex-detail.component.html',
@@ -8,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PokedexDetailComponent implements OnInit {
 
-  public pokemon: any;
+  public pokemon: Pokemon;
 
   constructor(private route: ActivatedRoute ) { }
 
