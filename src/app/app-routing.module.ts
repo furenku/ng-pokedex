@@ -7,7 +7,7 @@ import { PokedexModule } from "./pokedex/pokedex.module";
 const routes: Routes = [
   {
     path: "",
-    loadChildren: './pokedex/pokedex.module#PokedexModule'
+    loadChildren: './pokedex/pokedex.module#PokedexModule',
   },
   {
     path: "pokedex/:pokemon_id",
