@@ -1,3 +1,23 @@
+<section class="pokedex-filters mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-6 ml-auto mr-auto">
+          <div class="text-center">
+            <label>Busca a tu pokemon favorito:</label>
+            
+            <input type="text" [formControl]="searchInput">
+
+            <small class="form-text text-muted">
+              Actualmente solo se pueden hacer búsquedas por nombre
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
 <ul>
 
   <pokedex-card [pokemon]="pokemon" *ngFor="let pokemon of pokemons"></pokedex-card>      

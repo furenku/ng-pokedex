@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { PokedexService } from '../../pokedex/pokedex.service';
 
 @Component({
   selector: 'pokedex-header',
@@ -9,13 +7,10 @@ import { PokedexService } from '../../pokedex/pokedex.service';
 })
 export class HeaderComponent implements OnInit {
 
-  private searchInput = new FormControl('');
-
-  constructor( private pokedexService: PokedexService ) { }
+  constructor() { }
 
   ngOnInit() {
 
-    this.searchInput.valueChanges.subscribe( value => this.pokedexService.searchPokemons( value ) );  
 
   }
 

@@ -1,20 +1,10 @@
 <header class="header">
-
-    <h2>
+  <div class="container">
+    <nav class="text-center navbar-dark">
       <a [routerLink]="['/']">
-            Pokedex
+        <img src="../../../assets/logo_pokemon.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
+        Pokédex Virtual
       </a>
-    </h2>
-
-    <div>
-        <label>Busca a tu pokemon favorito:</label>
-
-        <input type="text" [formControl]="searchInput">
-    
-        <small class="form-text text-muted">
-          Actualmente solo se pueden hacer búsquedas por nombre
-        </small>
-    
-    </div>
-
+    </nav>
+  </div>
 </header>
