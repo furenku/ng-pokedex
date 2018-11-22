@@ -11,13 +11,15 @@ import { Pokemon } from "../pokemon.model";
 export class PokedexDetailComponent implements OnInit {
 
   public pokemon: Pokemon;
+  public pokemonTags: string[];
+  public weaknewssTags: string[];
 
   constructor(private route: ActivatedRoute ) { }
 
   ngOnInit() {
     
     this.pokemon = this.route.snapshot.data['pokemon'] || {};
-    
+ 
   }
 
 }
