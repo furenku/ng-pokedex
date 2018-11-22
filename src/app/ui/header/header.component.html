@@ -1,17 +1,20 @@
 <header class="header">
 
-    <h1>
-      Pokedex
-    </h1>
+    <h2>
+      <a [routerLink]="['/']">
+            Pokedex
+      </a>
+    </h2>
 
     <div>
         <label>Busca a tu pokemon favorito:</label>
 
         <input type="text" [formControl]="searchInput">
     
-        <small className="form-text text-muted">
+        <small class="form-text text-muted">
           Actualmente solo se pueden hacer búsquedas por nombre
         </small>
     
     </div>
+
 </header>
